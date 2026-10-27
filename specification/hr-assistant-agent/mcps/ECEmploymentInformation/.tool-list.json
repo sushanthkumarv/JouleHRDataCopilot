@@ -1,0 +1,7220 @@
+[
+  {
+    "name": "get_metadata_sfodata",
+    "title": "get_metadata_sfodata",
+    "description": "Get metadata of the OData service with optional filtering to reduce token consumption.\nReturns the metadata in XML format, which can be used to discover available entities and their properties.\nCall this endpoint every time before you call other tools to ensure understanding of the schema.\nBased on the metadata, you can dynamically create an OData request.\n\nUse filtering parameters to get specific metadata sections. Without parameters, this tool returns the complete XML metadata (which might be huge).\nOnly use the specified enum values for the filtering parameters.\n",
+    "odataType": {
+      "metadataRequest": {},
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "batch_for_sfodata",
+    "title": "batch_for_sfodata",
+    "description": "Execute multiple OData operations in a single batch request using the $batch endpoint. This allows you to combine multiple tool calls into one HTTP request, improving efficiency when performing multiple operations.",
+    "odataType": {
+      "batchRequest": {},
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "list_hiredatechange_for_sfodata",
+    "title": "list_HireDateChange_for_sfodata",
+    "description": "Retrieve a list of entities from the HireDateChange collection in the sfodata service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "HireDateChange",
+        "crudOperation": "read",
+        "parameters": [
+          {
+            "name": "filter"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "orderby"
+          },
+          {
+            "name": "top"
+          },
+          {
+            "name": "skip"
+          },
+          {
+            "name": "expand"
+          },
+          {
+            "name": "inlinecount"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "create_hiredatechange_for_sfodata",
+    "title": "create_HireDateChange_for_sfodata",
+    "description": "Create a new instance of the HireDateChange EntitySet in the sfodata service. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "HireDateChange",
+        "crudOperation": "create",
+        "parameters": [
+          {
+            "name": "code",
+            "newParameterName": "code"
+          },
+          {
+            "name": "newHireDate",
+            "newParameterName": "newhiredate"
+          },
+          {
+            "name": "usersSysId",
+            "newParameterName": "userssysid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "content-id"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "update_hiredatechange_for_sfodata",
+    "title": "update_HireDateChange_for_sfodata",
+    "description": "Update an entity in HireDateChange EntitySet in the sfodata service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "HireDateChange",
+        "crudOperation": "update",
+        "parameters": [
+          {
+            "name": "code",
+            "newParameterName": "code"
+          },
+          {
+            "name": "newHireDate",
+            "newParameterName": "newhiredate"
+          },
+          {
+            "name": "usersSysId",
+            "newParameterName": "userssysid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "delete_hiredatechange_for_sfodata",
+    "title": "delete_HireDateChange_for_sfodata",
+    "description": "Delete an entity from HireDateChange EntitySet in the sfodata service.",
+    "odataType": {
+      "entitySet": {
+        "name": "HireDateChange",
+        "crudOperation": "delete",
+        "parameters": [
+          {
+            "name": "code",
+            "newParameterName": "code"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get_hiredatechange_for_sfodata",
+    "title": "get_HireDateChange_for_sfodata",
+    "description": "Retrieve a single entity by its key from the HireDateChange collection in the sfodata service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "HireDateChange",
+        "crudOperation": "readByKey",
+        "parameters": [
+          {
+            "name": "code",
+            "newParameterName": "code"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "expand"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "count_hiredatechange_for_sfodata",
+    "title": "count_HireDateChange_for_sfodata",
+    "description": "Get the total count of entities in the HireDateChange collection in the sfodata service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "HireDateChange",
+        "crudOperation": "count",
+        "parameters": [
+          {
+            "name": "filter"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "list_empemployment_for_sfodata",
+    "title": "list_EmpEmployment_for_sfodata",
+    "description": "Retrieve a list of entities from the EmpEmployment collection in the sfodata service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpEmployment",
+        "crudOperation": "read",
+        "parameters": [
+          {
+            "name": "filter"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "orderby"
+          },
+          {
+            "name": "top"
+          },
+          {
+            "name": "skip"
+          },
+          {
+            "name": "expand"
+          },
+          {
+            "name": "inlinecount"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "create_empemployment_for_sfodata",
+    "title": "create_EmpEmployment_for_sfodata",
+    "description": "Create a new instance of the EmpEmployment EntitySet in the sfodata service. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpEmployment",
+        "crudOperation": "create",
+        "parameters": [
+          {
+            "name": "StockEndDate",
+            "newParameterName": "stockenddate"
+          },
+          {
+            "name": "assignmentClass",
+            "newParameterName": "assignmentclass"
+          },
+          {
+            "name": "benefitsEligibilityStartDate",
+            "newParameterName": "benefitseligibilitystartdate"
+          },
+          {
+            "name": "benefitsEndDate",
+            "newParameterName": "benefitsenddate"
+          },
+          {
+            "name": "bonusPayExpirationDate",
+            "newParameterName": "bonuspayexpirationdate"
+          },
+          {
+            "name": "createdBy",
+            "newParameterName": "createdby"
+          },
+          {
+            "name": "createdDateTime",
+            "newParameterName": "createddatetime"
+          },
+          {
+            "name": "createdOn",
+            "newParameterName": "createdon"
+          },
+          {
+            "name": "eligibleForSalContinuation",
+            "newParameterName": "eligibleforsalcontinuation"
+          },
+          {
+            "name": "eligibleForStock",
+            "newParameterName": "eligibleforstock"
+          },
+          {
+            "name": "employeeFirstEmployment",
+            "newParameterName": "employeefirstemployment"
+          },
+          {
+            "name": "endDate",
+            "newParameterName": "enddate"
+          },
+          {
+            "name": "firstDateWorked",
+            "newParameterName": "firstdateworked"
+          },
+          {
+            "name": "includeAllRecords",
+            "newParameterName": "includeallrecords"
+          },
+          {
+            "name": "initialOptionGrant",
+            "newParameterName": "initialoptiongrant"
+          },
+          {
+            "name": "initialStockGrant",
+            "newParameterName": "initialstockgrant"
+          },
+          {
+            "name": "isContingentWorker",
+            "newParameterName": "iscontingentworker"
+          },
+          {
+            "name": "isECRecord",
+            "newParameterName": "isecrecord"
+          },
+          {
+            "name": "jobNumber",
+            "newParameterName": "jobnumber"
+          },
+          {
+            "name": "lastDateWorked",
+            "newParameterName": "lastdateworked"
+          },
+          {
+            "name": "lastModifiedBy",
+            "newParameterName": "lastmodifiedby"
+          },
+          {
+            "name": "lastModifiedDateTime",
+            "newParameterName": "lastmodifieddatetime"
+          },
+          {
+            "name": "lastModifiedOn",
+            "newParameterName": "lastmodifiedon"
+          },
+          {
+            "name": "okToRehire",
+            "newParameterName": "oktorehire"
+          },
+          {
+            "name": "originalStartDate",
+            "newParameterName": "originalstartdate"
+          },
+          {
+            "name": "payrollEndDate",
+            "newParameterName": "payrollenddate"
+          },
+          {
+            "name": "personIdExternal",
+            "newParameterName": "personidexternal"
+          },
+          {
+            "name": "prevEmployeeId",
+            "newParameterName": "prevemployeeid"
+          },
+          {
+            "name": "professionalServiceDate",
+            "newParameterName": "professionalservicedate"
+          },
+          {
+            "name": "regretTermination",
+            "newParameterName": "regrettermination"
+          },
+          {
+            "name": "salaryEndDate",
+            "newParameterName": "salaryenddate"
+          },
+          {
+            "name": "seniorityDate",
+            "newParameterName": "senioritydate"
+          },
+          {
+            "name": "serviceDate",
+            "newParameterName": "servicedate"
+          },
+          {
+            "name": "startDate",
+            "newParameterName": "startdate"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          },
+          {
+            "name": "empJobRelationshipNav",
+            "newParameterName": "empjobrelationshipnav"
+          },
+          {
+            "name": "empWorkPermitNav",
+            "newParameterName": "empworkpermitnav"
+          },
+          {
+            "name": "jobInfoNav",
+            "newParameterName": "jobinfonav"
+          },
+          {
+            "name": "empPensionPayoutNav",
+            "newParameterName": "emppensionpayoutnav"
+          },
+          {
+            "name": "empBeneficiaryNav",
+            "newParameterName": "empbeneficiarynav"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "content-id"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "update_empemployment_for_sfodata",
+    "title": "update_EmpEmployment_for_sfodata",
+    "description": "Update an entity in EmpEmployment EntitySet in the sfodata service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpEmployment",
+        "crudOperation": "update",
+        "parameters": [
+          {
+            "name": "personIdExternal",
+            "newParameterName": "personidexternal"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "delete_empemployment_for_sfodata",
+    "title": "delete_EmpEmployment_for_sfodata",
+    "description": "Delete an entity from EmpEmployment EntitySet in the sfodata service.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpEmployment",
+        "crudOperation": "delete",
+        "parameters": [
+          {
+            "name": "personIdExternal",
+            "newParameterName": "personidexternal"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get_empemployment_for_sfodata",
+    "title": "get_EmpEmployment_for_sfodata",
+    "description": "Retrieve a single entity by its key from the EmpEmployment collection in the sfodata service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpEmployment",
+        "crudOperation": "readByKey",
+        "parameters": [
+          {
+            "name": "personIdExternal",
+            "newParameterName": "personidexternal"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "expand"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "count_empemployment_for_sfodata",
+    "title": "count_EmpEmployment_for_sfodata",
+    "description": "Get the total count of entities in the EmpEmployment collection in the sfodata service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpEmployment",
+        "crudOperation": "count",
+        "parameters": [
+          {
+            "name": "filter"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "list_empemploymenttermination_for_sfodata",
+    "title": "list_EmpEmploymentTermination_for_sfodata",
+    "description": "Retrieve a list of entities from the EmpEmploymentTermination collection in the sfodata service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpEmploymentTermination",
+        "crudOperation": "read",
+        "parameters": [
+          {
+            "name": "filter"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "orderby"
+          },
+          {
+            "name": "top"
+          },
+          {
+            "name": "skip"
+          },
+          {
+            "name": "expand"
+          },
+          {
+            "name": "inlinecount"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "create_empemploymenttermination_for_sfodata",
+    "title": "create_EmpEmploymentTermination_for_sfodata",
+    "description": "Create a new instance of the EmpEmploymentTermination EntitySet in the sfodata service. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpEmploymentTermination",
+        "crudOperation": "create",
+        "parameters": [
+          {
+            "name": "StockEndDate",
+            "newParameterName": "stockenddate"
+          },
+          {
+            "name": "attachmentId",
+            "newParameterName": "attachmentid"
+          },
+          {
+            "name": "benefitsEndDate",
+            "newParameterName": "benefitsenddate"
+          },
+          {
+            "name": "bonusPayExpirationDate",
+            "newParameterName": "bonuspayexpirationdate"
+          },
+          {
+            "name": "createdBy",
+            "newParameterName": "createdby"
+          },
+          {
+            "name": "createdDateTime",
+            "newParameterName": "createddatetime"
+          },
+          {
+            "name": "createdOn",
+            "newParameterName": "createdon"
+          },
+          {
+            "name": "eligibleForSalContinuation",
+            "newParameterName": "eligibleforsalcontinuation"
+          },
+          {
+            "name": "endDate",
+            "newParameterName": "enddate"
+          },
+          {
+            "name": "eventReason",
+            "newParameterName": "eventreason"
+          },
+          {
+            "name": "lastDateWorked",
+            "newParameterName": "lastdateworked"
+          },
+          {
+            "name": "lastModifiedBy",
+            "newParameterName": "lastmodifiedby"
+          },
+          {
+            "name": "lastModifiedDateTime",
+            "newParameterName": "lastmodifieddatetime"
+          },
+          {
+            "name": "lastModifiedOn",
+            "newParameterName": "lastmodifiedon"
+          },
+          {
+            "name": "newMainEmploymentId",
+            "newParameterName": "newmainemploymentid"
+          },
+          {
+            "name": "notes",
+            "newParameterName": "notes"
+          },
+          {
+            "name": "okToRehire",
+            "newParameterName": "oktorehire"
+          },
+          {
+            "name": "payrollEndDate",
+            "newParameterName": "payrollenddate"
+          },
+          {
+            "name": "personIdExternal",
+            "newParameterName": "personidexternal"
+          },
+          {
+            "name": "regretTermination",
+            "newParameterName": "regrettermination"
+          },
+          {
+            "name": "salaryEndDate",
+            "newParameterName": "salaryenddate"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          },
+          {
+            "name": "employmentNav",
+            "newParameterName": "employmentnav"
+          },
+          {
+            "name": "jobInfoNav",
+            "newParameterName": "jobinfonav"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "content-id"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "update_empemploymenttermination_for_sfodata",
+    "title": "update_EmpEmploymentTermination_for_sfodata",
+    "description": "Update an entity in EmpEmploymentTermination EntitySet in the sfodata service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpEmploymentTermination",
+        "crudOperation": "update",
+        "parameters": [
+          {
+            "name": "endDate",
+            "newParameterName": "enddate"
+          },
+          {
+            "name": "personIdExternal",
+            "newParameterName": "personidexternal"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "delete_empemploymenttermination_for_sfodata",
+    "title": "delete_EmpEmploymentTermination_for_sfodata",
+    "description": "Delete an entity from EmpEmploymentTermination EntitySet in the sfodata service.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpEmploymentTermination",
+        "crudOperation": "delete",
+        "parameters": [
+          {
+            "name": "endDate",
+            "newParameterName": "enddate"
+          },
+          {
+            "name": "personIdExternal",
+            "newParameterName": "personidexternal"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get_empemploymenttermination_for_sfodata",
+    "title": "get_EmpEmploymentTermination_for_sfodata",
+    "description": "Retrieve a single entity by its key from the EmpEmploymentTermination collection in the sfodata service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpEmploymentTermination",
+        "crudOperation": "readByKey",
+        "parameters": [
+          {
+            "name": "endDate",
+            "newParameterName": "enddate"
+          },
+          {
+            "name": "personIdExternal",
+            "newParameterName": "personidexternal"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "expand"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "count_empemploymenttermination_for_sfodata",
+    "title": "count_EmpEmploymentTermination_for_sfodata",
+    "description": "Get the total count of entities in the EmpEmploymentTermination collection in the sfodata service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpEmploymentTermination",
+        "crudOperation": "count",
+        "parameters": [
+          {
+            "name": "filter"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "list_empworkpermit_for_sfodata",
+    "title": "list_EmpWorkPermit_for_sfodata",
+    "description": "Retrieve a list of entities from the EmpWorkPermit collection in the sfodata service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpWorkPermit",
+        "crudOperation": "read",
+        "parameters": [
+          {
+            "name": "filter"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "orderby"
+          },
+          {
+            "name": "top"
+          },
+          {
+            "name": "skip"
+          },
+          {
+            "name": "expand"
+          },
+          {
+            "name": "inlinecount"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "create_empworkpermit_for_sfodata",
+    "title": "create_EmpWorkPermit_for_sfodata",
+    "description": "Create a new instance of the EmpWorkPermit EntitySet in the sfodata service. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpWorkPermit",
+        "crudOperation": "create",
+        "parameters": [
+          {
+            "name": "attachment",
+            "newParameterName": "attachment"
+          },
+          {
+            "name": "attachmentFileName",
+            "newParameterName": "attachmentfilename"
+          },
+          {
+            "name": "attachmentFileSize",
+            "newParameterName": "attachmentfilesize"
+          },
+          {
+            "name": "attachmentFileType",
+            "newParameterName": "attachmentfiletype"
+          },
+          {
+            "name": "attachmentId",
+            "newParameterName": "attachmentid"
+          },
+          {
+            "name": "attachmentMimeType",
+            "newParameterName": "attachmentmimetype"
+          },
+          {
+            "name": "attachmentStatus",
+            "newParameterName": "attachmentstatus"
+          },
+          {
+            "name": "country",
+            "newParameterName": "country"
+          },
+          {
+            "name": "createdBy",
+            "newParameterName": "createdby"
+          },
+          {
+            "name": "createdDateTime",
+            "newParameterName": "createddatetime"
+          },
+          {
+            "name": "createdOn",
+            "newParameterName": "createdon"
+          },
+          {
+            "name": "documentNumber",
+            "newParameterName": "documentnumber"
+          },
+          {
+            "name": "documentTitle",
+            "newParameterName": "documenttitle"
+          },
+          {
+            "name": "documentType",
+            "newParameterName": "documenttype"
+          },
+          {
+            "name": "expirationDate",
+            "newParameterName": "expirationdate"
+          },
+          {
+            "name": "isValidated",
+            "newParameterName": "isvalidated"
+          },
+          {
+            "name": "issueDate",
+            "newParameterName": "issuedate"
+          },
+          {
+            "name": "issuePlace",
+            "newParameterName": "issueplace"
+          },
+          {
+            "name": "issuingAuthority",
+            "newParameterName": "issuingauthority"
+          },
+          {
+            "name": "lastModifiedBy",
+            "newParameterName": "lastmodifiedby"
+          },
+          {
+            "name": "lastModifiedDateTime",
+            "newParameterName": "lastmodifieddatetime"
+          },
+          {
+            "name": "lastModifiedOn",
+            "newParameterName": "lastmodifiedon"
+          },
+          {
+            "name": "notes",
+            "newParameterName": "notes"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          },
+          {
+            "name": "employmentNav",
+            "newParameterName": "employmentnav"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "content-id"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "update_empworkpermit_for_sfodata",
+    "title": "update_EmpWorkPermit_for_sfodata",
+    "description": "Update an entity in EmpWorkPermit EntitySet in the sfodata service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpWorkPermit",
+        "crudOperation": "update",
+        "parameters": [
+          {
+            "name": "country",
+            "newParameterName": "country"
+          },
+          {
+            "name": "documentNumber",
+            "newParameterName": "documentnumber"
+          },
+          {
+            "name": "documentType",
+            "newParameterName": "documenttype"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "delete_empworkpermit_for_sfodata",
+    "title": "delete_EmpWorkPermit_for_sfodata",
+    "description": "Delete an entity from EmpWorkPermit EntitySet in the sfodata service.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpWorkPermit",
+        "crudOperation": "delete",
+        "parameters": [
+          {
+            "name": "country",
+            "newParameterName": "country"
+          },
+          {
+            "name": "documentNumber",
+            "newParameterName": "documentnumber"
+          },
+          {
+            "name": "documentType",
+            "newParameterName": "documenttype"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get_empworkpermit_for_sfodata",
+    "title": "get_EmpWorkPermit_for_sfodata",
+    "description": "Retrieve a single entity by its key from the EmpWorkPermit collection in the sfodata service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpWorkPermit",
+        "crudOperation": "readByKey",
+        "parameters": [
+          {
+            "name": "country",
+            "newParameterName": "country"
+          },
+          {
+            "name": "documentNumber",
+            "newParameterName": "documentnumber"
+          },
+          {
+            "name": "documentType",
+            "newParameterName": "documenttype"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "expand"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "count_empworkpermit_for_sfodata",
+    "title": "count_EmpWorkPermit_for_sfodata",
+    "description": "Get the total count of entities in the EmpWorkPermit collection in the sfodata service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpWorkPermit",
+        "crudOperation": "count",
+        "parameters": [
+          {
+            "name": "filter"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "list_empjobrelationships_for_sfodata",
+    "title": "list_EmpJobRelationships_for_sfodata",
+    "description": "Retrieve a list of entities from the EmpJobRelationships collection in the sfodata service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpJobRelationships",
+        "crudOperation": "read",
+        "parameters": [
+          {
+            "name": "filter"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "orderby"
+          },
+          {
+            "name": "top"
+          },
+          {
+            "name": "skip"
+          },
+          {
+            "name": "expand"
+          },
+          {
+            "name": "inlinecount"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "create_empjobrelationships_for_sfodata",
+    "title": "create_EmpJobRelationships_for_sfodata",
+    "description": "Create a new instance of the EmpJobRelationships EntitySet in the sfodata service. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpJobRelationships",
+        "crudOperation": "create",
+        "parameters": [
+          {
+            "name": "createdBy",
+            "newParameterName": "createdby"
+          },
+          {
+            "name": "createdDateTime",
+            "newParameterName": "createddatetime"
+          },
+          {
+            "name": "createdOn",
+            "newParameterName": "createdon"
+          },
+          {
+            "name": "endDate",
+            "newParameterName": "enddate"
+          },
+          {
+            "name": "lastModifiedBy",
+            "newParameterName": "lastmodifiedby"
+          },
+          {
+            "name": "lastModifiedDateTime",
+            "newParameterName": "lastmodifieddatetime"
+          },
+          {
+            "name": "lastModifiedOn",
+            "newParameterName": "lastmodifiedon"
+          },
+          {
+            "name": "operation",
+            "newParameterName": "operation"
+          },
+          {
+            "name": "relUserId",
+            "newParameterName": "reluserid"
+          },
+          {
+            "name": "relationshipType",
+            "newParameterName": "relationshiptype"
+          },
+          {
+            "name": "startDate",
+            "newParameterName": "startdate"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          },
+          {
+            "name": "employmentNav",
+            "newParameterName": "employmentnav"
+          },
+          {
+            "name": "relEmploymentNav",
+            "newParameterName": "relemploymentnav"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "content-id"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "update_empjobrelationships_for_sfodata",
+    "title": "update_EmpJobRelationships_for_sfodata",
+    "description": "Update an entity in EmpJobRelationships EntitySet in the sfodata service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpJobRelationships",
+        "crudOperation": "update",
+        "parameters": [
+          {
+            "name": "relationshipType",
+            "newParameterName": "relationshiptype"
+          },
+          {
+            "name": "startDate",
+            "newParameterName": "startdate"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "delete_empjobrelationships_for_sfodata",
+    "title": "delete_EmpJobRelationships_for_sfodata",
+    "description": "Delete an entity from EmpJobRelationships EntitySet in the sfodata service.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpJobRelationships",
+        "crudOperation": "delete",
+        "parameters": [
+          {
+            "name": "relationshipType",
+            "newParameterName": "relationshiptype"
+          },
+          {
+            "name": "startDate",
+            "newParameterName": "startdate"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get_empjobrelationships_for_sfodata",
+    "title": "get_EmpJobRelationships_for_sfodata",
+    "description": "Retrieve a single entity by its key from the EmpJobRelationships collection in the sfodata service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpJobRelationships",
+        "crudOperation": "readByKey",
+        "parameters": [
+          {
+            "name": "relationshipType",
+            "newParameterName": "relationshiptype"
+          },
+          {
+            "name": "startDate",
+            "newParameterName": "startdate"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "expand"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "count_empjobrelationships_for_sfodata",
+    "title": "count_EmpJobRelationships_for_sfodata",
+    "description": "Get the total count of entities in the EmpJobRelationships collection in the sfodata service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpJobRelationships",
+        "crudOperation": "count",
+        "parameters": [
+          {
+            "name": "filter"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "list_empjob_for_sfodata",
+    "title": "list_EmpJob_for_sfodata",
+    "description": "Retrieve a list of entities from the EmpJob collection in the sfodata service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpJob",
+        "crudOperation": "read",
+        "parameters": [
+          {
+            "name": "filter"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "orderby"
+          },
+          {
+            "name": "top"
+          },
+          {
+            "name": "skip"
+          },
+          {
+            "name": "expand"
+          },
+          {
+            "name": "inlinecount"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "create_empjob_for_sfodata",
+    "title": "create_EmpJob_for_sfodata",
+    "description": "Create a new instance of the EmpJob EntitySet in the sfodata service. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpJob",
+        "crudOperation": "create",
+        "parameters": [
+          {
+            "name": "assedicCertInitialStateNum",
+            "newParameterName": "assediccertinitialstatenum"
+          },
+          {
+            "name": "assedicCertObjectNum",
+            "newParameterName": "assediccertobjectnum"
+          },
+          {
+            "name": "businessUnit",
+            "newParameterName": "businessunit"
+          },
+          {
+            "name": "calcMethodIndicator",
+            "newParameterName": "calcmethodindicator"
+          },
+          {
+            "name": "commitmentIndicator",
+            "newParameterName": "commitmentindicator"
+          },
+          {
+            "name": "company",
+            "newParameterName": "company"
+          },
+          {
+            "name": "contractReferenceForAed",
+            "newParameterName": "contractreferenceforaed"
+          },
+          {
+            "name": "contractType",
+            "newParameterName": "contracttype"
+          },
+          {
+            "name": "costCenter",
+            "newParameterName": "costcenter"
+          },
+          {
+            "name": "countryOfCompany",
+            "newParameterName": "countryofcompany"
+          },
+          {
+            "name": "createdBy",
+            "newParameterName": "createdby"
+          },
+          {
+            "name": "createdDateTime",
+            "newParameterName": "createddatetime"
+          },
+          {
+            "name": "createdOn",
+            "newParameterName": "createdon"
+          },
+          {
+            "name": "defaultOvertimeCompensationVariant",
+            "newParameterName": "defaultovertimecompensationvariant"
+          },
+          {
+            "name": "department",
+            "newParameterName": "department"
+          },
+          {
+            "name": "division",
+            "newParameterName": "division"
+          },
+          {
+            "name": "eeo1JobCategory",
+            "newParameterName": "eeo1jobcategory"
+          },
+          {
+            "name": "eeo4JobCategory",
+            "newParameterName": "eeo4jobcategory"
+          },
+          {
+            "name": "eeo5JobCategory",
+            "newParameterName": "eeo5jobcategory"
+          },
+          {
+            "name": "eeo6JobCategory",
+            "newParameterName": "eeo6jobcategory"
+          },
+          {
+            "name": "eeoClass",
+            "newParameterName": "eeoclass"
+          },
+          {
+            "name": "electoralCollegeForWorkersRepresentatives",
+            "newParameterName": "electoralcollegeforworkersrepresentatives"
+          },
+          {
+            "name": "electoralCollegeForWorksCouncil",
+            "newParameterName": "electoralcollegeforworkscouncil"
+          },
+          {
+            "name": "empRelationship",
+            "newParameterName": "emprelationship"
+          },
+          {
+            "name": "emplStatus",
+            "newParameterName": "emplstatus"
+          },
+          {
+            "name": "employeeClass",
+            "newParameterName": "employeeclass"
+          },
+          {
+            "name": "employeeWorkgroupMembership",
+            "newParameterName": "employeeworkgroupmembership"
+          },
+          {
+            "name": "employmentType",
+            "newParameterName": "employmenttype"
+          },
+          {
+            "name": "endDate",
+            "newParameterName": "enddate"
+          },
+          {
+            "name": "event",
+            "newParameterName": "event"
+          },
+          {
+            "name": "eventReason",
+            "newParameterName": "eventreason"
+          },
+          {
+            "name": "exclExecutiveSector",
+            "newParameterName": "exclexecutivesector"
+          },
+          {
+            "name": "expectedReturnDate",
+            "newParameterName": "expectedreturndate"
+          },
+          {
+            "name": "familyRelationshipWithEmployer",
+            "newParameterName": "familyrelationshipwithemployer"
+          },
+          {
+            "name": "fgtsDate",
+            "newParameterName": "fgtsdate"
+          },
+          {
+            "name": "fgtsOptant",
+            "newParameterName": "fgtsoptant"
+          },
+          {
+            "name": "fgtsPercent",
+            "newParameterName": "fgtspercent"
+          },
+          {
+            "name": "flsaStatus",
+            "newParameterName": "flsastatus"
+          },
+          {
+            "name": "fte",
+            "newParameterName": "fte"
+          },
+          {
+            "name": "harmfulAgentExposure",
+            "newParameterName": "harmfulagentexposure"
+          },
+          {
+            "name": "hazard",
+            "newParameterName": "hazard"
+          },
+          {
+            "name": "healthRisk",
+            "newParameterName": "healthrisk"
+          },
+          {
+            "name": "holidayCalendarCode",
+            "newParameterName": "holidaycalendarcode"
+          },
+          {
+            "name": "isCompetitionClauseActive",
+            "newParameterName": "iscompetitionclauseactive"
+          },
+          {
+            "name": "isFulltimeEmployee",
+            "newParameterName": "isfulltimeemployee"
+          },
+          {
+            "name": "isSideLineJobAllowed",
+            "newParameterName": "issidelinejoballowed"
+          },
+          {
+            "name": "jobCode",
+            "newParameterName": "jobcode"
+          },
+          {
+            "name": "jobTitle",
+            "newParameterName": "jobtitle"
+          },
+          {
+            "name": "laborProtection",
+            "newParameterName": "laborprotection"
+          },
+          {
+            "name": "lastModifiedBy",
+            "newParameterName": "lastmodifiedby"
+          },
+          {
+            "name": "lastModifiedDateTime",
+            "newParameterName": "lastmodifieddatetime"
+          },
+          {
+            "name": "lastModifiedOn",
+            "newParameterName": "lastmodifiedon"
+          },
+          {
+            "name": "location",
+            "newParameterName": "location"
+          },
+          {
+            "name": "managerId",
+            "newParameterName": "managerid"
+          },
+          {
+            "name": "mandatoryWorkBreakRecord",
+            "newParameterName": "mandatoryworkbreakrecord"
+          },
+          {
+            "name": "municipalInseeCode",
+            "newParameterName": "municipalinseecode"
+          },
+          {
+            "name": "notes",
+            "newParameterName": "notes"
+          },
+          {
+            "name": "operation",
+            "newParameterName": "operation"
+          },
+          {
+            "name": "payGrade",
+            "newParameterName": "paygrade"
+          },
+          {
+            "name": "payScaleArea",
+            "newParameterName": "payscalearea"
+          },
+          {
+            "name": "payScaleGroup",
+            "newParameterName": "payscalegroup"
+          },
+          {
+            "name": "payScaleLevel",
+            "newParameterName": "payscalelevel"
+          },
+          {
+            "name": "payScaleType",
+            "newParameterName": "payscaletype"
+          },
+          {
+            "name": "pcfm",
+            "newParameterName": "pcfm"
+          },
+          {
+            "name": "pensionProtection",
+            "newParameterName": "pensionprotection"
+          },
+          {
+            "name": "permitIndicator",
+            "newParameterName": "permitindicator"
+          },
+          {
+            "name": "position",
+            "newParameterName": "position"
+          },
+          {
+            "name": "positionEntryDate",
+            "newParameterName": "positionentrydate"
+          },
+          {
+            "name": "probationPeriodEndDate",
+            "newParameterName": "probationperiodenddate"
+          },
+          {
+            "name": "regularTemp",
+            "newParameterName": "regulartemp"
+          },
+          {
+            "name": "residentVote",
+            "newParameterName": "residentvote"
+          },
+          {
+            "name": "retired",
+            "newParameterName": "retired"
+          },
+          {
+            "name": "seqNumber",
+            "newParameterName": "seqnumber"
+          },
+          {
+            "name": "sickPaySupplement",
+            "newParameterName": "sickpaysupplement"
+          },
+          {
+            "name": "standardHours",
+            "newParameterName": "standardhours"
+          },
+          {
+            "name": "startDate",
+            "newParameterName": "startdate"
+          },
+          {
+            "name": "teachersPension",
+            "newParameterName": "teacherspension"
+          },
+          {
+            "name": "timeRecordingAdmissibilityCode",
+            "newParameterName": "timerecordingadmissibilitycode"
+          },
+          {
+            "name": "timeRecordingProfileCode",
+            "newParameterName": "timerecordingprofilecode"
+          },
+          {
+            "name": "timeRecordingVariant",
+            "newParameterName": "timerecordingvariant"
+          },
+          {
+            "name": "timeTypeProfileCode",
+            "newParameterName": "timetypeprofilecode"
+          },
+          {
+            "name": "timezone",
+            "newParameterName": "timezone"
+          },
+          {
+            "name": "travelDistance",
+            "newParameterName": "traveldistance"
+          },
+          {
+            "name": "tupeOrgNumber",
+            "newParameterName": "tupeorgnumber"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          },
+          {
+            "name": "workLocation",
+            "newParameterName": "worklocation"
+          },
+          {
+            "name": "workerCategory",
+            "newParameterName": "workercategory"
+          },
+          {
+            "name": "workingDaysPerWeek",
+            "newParameterName": "workingdaysperweek"
+          },
+          {
+            "name": "workingTimeDirective",
+            "newParameterName": "workingtimedirective"
+          },
+          {
+            "name": "workscheduleCode",
+            "newParameterName": "workschedulecode"
+          },
+          {
+            "name": "wtdHoursLimit",
+            "newParameterName": "wtdhourslimit"
+          },
+          {
+            "name": "employmentNav",
+            "newParameterName": "employmentnav"
+          },
+          {
+            "name": "managerEmploymentNav",
+            "newParameterName": "manageremploymentnav"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "content-id"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "update_empjob_for_sfodata",
+    "title": "update_EmpJob_for_sfodata",
+    "description": "Update an entity in EmpJob EntitySet in the sfodata service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpJob",
+        "crudOperation": "update",
+        "parameters": [
+          {
+            "name": "seqNumber",
+            "newParameterName": "seqnumber"
+          },
+          {
+            "name": "startDate",
+            "newParameterName": "startdate"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "delete_empjob_for_sfodata",
+    "title": "delete_EmpJob_for_sfodata",
+    "description": "Delete an entity from EmpJob EntitySet in the sfodata service.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpJob",
+        "crudOperation": "delete",
+        "parameters": [
+          {
+            "name": "seqNumber",
+            "newParameterName": "seqnumber"
+          },
+          {
+            "name": "startDate",
+            "newParameterName": "startdate"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get_empjob_for_sfodata",
+    "title": "get_EmpJob_for_sfodata",
+    "description": "Retrieve a single entity by its key from the EmpJob collection in the sfodata service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpJob",
+        "crudOperation": "readByKey",
+        "parameters": [
+          {
+            "name": "seqNumber",
+            "newParameterName": "seqnumber"
+          },
+          {
+            "name": "startDate",
+            "newParameterName": "startdate"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "expand"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "count_empjob_for_sfodata",
+    "title": "count_EmpJob_for_sfodata",
+    "description": "Get the total count of entities in the EmpJob collection in the sfodata service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpJob",
+        "crudOperation": "count",
+        "parameters": [
+          {
+            "name": "filter"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "list_personempterminationinfo_for_sfodata",
+    "title": "list_PersonEmpTerminationInfo_for_sfodata",
+    "description": "Retrieve a list of entities from the PersonEmpTerminationInfo collection in the sfodata service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "PersonEmpTerminationInfo",
+        "crudOperation": "read",
+        "parameters": [
+          {
+            "name": "filter"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "orderby"
+          },
+          {
+            "name": "top"
+          },
+          {
+            "name": "skip"
+          },
+          {
+            "name": "expand"
+          },
+          {
+            "name": "inlinecount"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "create_personempterminationinfo_for_sfodata",
+    "title": "create_PersonEmpTerminationInfo_for_sfodata",
+    "description": "Create a new instance of the PersonEmpTerminationInfo EntitySet in the sfodata service. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "PersonEmpTerminationInfo",
+        "crudOperation": "create",
+        "parameters": [
+          {
+            "name": "activeEmploymentsCount",
+            "newParameterName": "activeemploymentscount"
+          },
+          {
+            "name": "latestTerminationDate",
+            "newParameterName": "latestterminationdate"
+          },
+          {
+            "name": "personIdExternal",
+            "newParameterName": "personidexternal"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "content-id"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "update_personempterminationinfo_for_sfodata",
+    "title": "update_PersonEmpTerminationInfo_for_sfodata",
+    "description": "Update an entity in PersonEmpTerminationInfo EntitySet in the sfodata service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "PersonEmpTerminationInfo",
+        "crudOperation": "update",
+        "parameters": [
+          {
+            "name": "personIdExternal",
+            "newParameterName": "personidexternal"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "delete_personempterminationinfo_for_sfodata",
+    "title": "delete_PersonEmpTerminationInfo_for_sfodata",
+    "description": "Delete an entity from PersonEmpTerminationInfo EntitySet in the sfodata service.",
+    "odataType": {
+      "entitySet": {
+        "name": "PersonEmpTerminationInfo",
+        "crudOperation": "delete",
+        "parameters": [
+          {
+            "name": "personIdExternal",
+            "newParameterName": "personidexternal"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get_personempterminationinfo_for_sfodata",
+    "title": "get_PersonEmpTerminationInfo_for_sfodata",
+    "description": "Retrieve a single entity by its key from the PersonEmpTerminationInfo collection in the sfodata service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "PersonEmpTerminationInfo",
+        "crudOperation": "readByKey",
+        "parameters": [
+          {
+            "name": "personIdExternal",
+            "newParameterName": "personidexternal"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "expand"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "count_personempterminationinfo_for_sfodata",
+    "title": "count_PersonEmpTerminationInfo_for_sfodata",
+    "description": "Get the total count of entities in the PersonEmpTerminationInfo collection in the sfodata service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "PersonEmpTerminationInfo",
+        "crudOperation": "count",
+        "parameters": [
+          {
+            "name": "filter"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "list_emppensionpayout_for_sfodata",
+    "title": "list_EmpPensionPayout_for_sfodata",
+    "description": "Retrieve a list of entities from the EmpPensionPayout collection in the sfodata service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpPensionPayout",
+        "crudOperation": "read",
+        "parameters": [
+          {
+            "name": "filter"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "orderby"
+          },
+          {
+            "name": "top"
+          },
+          {
+            "name": "skip"
+          },
+          {
+            "name": "expand"
+          },
+          {
+            "name": "inlinecount"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "create_emppensionpayout_for_sfodata",
+    "title": "create_EmpPensionPayout_for_sfodata",
+    "description": "Create a new instance of the EmpPensionPayout EntitySet in the sfodata service. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpPensionPayout",
+        "crudOperation": "create",
+        "parameters": [
+          {
+            "name": "createdBy",
+            "newParameterName": "createdby"
+          },
+          {
+            "name": "createdDateTime",
+            "newParameterName": "createddatetime"
+          },
+          {
+            "name": "createdOn",
+            "newParameterName": "createdon"
+          },
+          {
+            "name": "endDate",
+            "newParameterName": "enddate"
+          },
+          {
+            "name": "lastModifiedBy",
+            "newParameterName": "lastmodifiedby"
+          },
+          {
+            "name": "lastModifiedDateTime",
+            "newParameterName": "lastmodifieddatetime"
+          },
+          {
+            "name": "lastModifiedOn",
+            "newParameterName": "lastmodifiedon"
+          },
+          {
+            "name": "payrollEndDate",
+            "newParameterName": "payrollenddate"
+          },
+          {
+            "name": "personIdExternal",
+            "newParameterName": "personidexternal"
+          },
+          {
+            "name": "plannedEndDate",
+            "newParameterName": "plannedenddate"
+          },
+          {
+            "name": "startDate",
+            "newParameterName": "startdate"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          },
+          {
+            "name": "employmentNav",
+            "newParameterName": "employmentnav"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "content-id"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "update_emppensionpayout_for_sfodata",
+    "title": "update_EmpPensionPayout_for_sfodata",
+    "description": "Update an entity in EmpPensionPayout EntitySet in the sfodata service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpPensionPayout",
+        "crudOperation": "update",
+        "parameters": [
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "delete_emppensionpayout_for_sfodata",
+    "title": "delete_EmpPensionPayout_for_sfodata",
+    "description": "Delete an entity from EmpPensionPayout EntitySet in the sfodata service.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpPensionPayout",
+        "crudOperation": "delete",
+        "parameters": [
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get_emppensionpayout_for_sfodata",
+    "title": "get_EmpPensionPayout_for_sfodata",
+    "description": "Retrieve a single entity by its key from the EmpPensionPayout collection in the sfodata service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpPensionPayout",
+        "crudOperation": "readByKey",
+        "parameters": [
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "expand"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "count_emppensionpayout_for_sfodata",
+    "title": "count_EmpPensionPayout_for_sfodata",
+    "description": "Get the total count of entities in the EmpPensionPayout collection in the sfodata service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpPensionPayout",
+        "crudOperation": "count",
+        "parameters": [
+          {
+            "name": "filter"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "list_empbeneficiary_for_sfodata",
+    "title": "list_EmpBeneficiary_for_sfodata",
+    "description": "Retrieve a list of entities from the EmpBeneficiary collection in the sfodata service. Supports OData query options for filtering, sorting, ranking ($top), skipping ($skip), expanding related entities, counting, selecting specific properties. Only use attributes in the query options that are specified in the metadata. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpBeneficiary",
+        "crudOperation": "read",
+        "parameters": [
+          {
+            "name": "filter"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "orderby"
+          },
+          {
+            "name": "top"
+          },
+          {
+            "name": "skip"
+          },
+          {
+            "name": "expand"
+          },
+          {
+            "name": "inlinecount"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "create_empbeneficiary_for_sfodata",
+    "title": "create_EmpBeneficiary_for_sfodata",
+    "description": "Create a new instance of the EmpBeneficiary EntitySet in the sfodata service. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpBeneficiary",
+        "crudOperation": "create",
+        "parameters": [
+          {
+            "name": "createdBy",
+            "newParameterName": "createdby"
+          },
+          {
+            "name": "createdDateTime",
+            "newParameterName": "createddatetime"
+          },
+          {
+            "name": "createdOn",
+            "newParameterName": "createdon"
+          },
+          {
+            "name": "endDate",
+            "newParameterName": "enddate"
+          },
+          {
+            "name": "lastModifiedBy",
+            "newParameterName": "lastmodifiedby"
+          },
+          {
+            "name": "lastModifiedDateTime",
+            "newParameterName": "lastmodifieddatetime"
+          },
+          {
+            "name": "lastModifiedOn",
+            "newParameterName": "lastmodifiedon"
+          },
+          {
+            "name": "payrollEndDate",
+            "newParameterName": "payrollenddate"
+          },
+          {
+            "name": "personIdExternal",
+            "newParameterName": "personidexternal"
+          },
+          {
+            "name": "plannedEndDate",
+            "newParameterName": "plannedenddate"
+          },
+          {
+            "name": "startDate",
+            "newParameterName": "startdate"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          },
+          {
+            "name": "employmentNav",
+            "newParameterName": "employmentnav"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "content-id"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "update_empbeneficiary_for_sfodata",
+    "title": "update_EmpBeneficiary_for_sfodata",
+    "description": "Update an entity in EmpBeneficiary EntitySet in the sfodata service. Provide the key properties to identify the entity and the properties to update in the request body. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpBeneficiary",
+        "crudOperation": "update",
+        "parameters": [
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "delete_empbeneficiary_for_sfodata",
+    "title": "delete_EmpBeneficiary_for_sfodata",
+    "description": "Delete an entity from EmpBeneficiary EntitySet in the sfodata service.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpBeneficiary",
+        "crudOperation": "delete",
+        "parameters": [
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get_empbeneficiary_for_sfodata",
+    "title": "get_EmpBeneficiary_for_sfodata",
+    "description": "Retrieve a single entity by its key from the EmpBeneficiary collection in the sfodata service. Provide the key property value(s) to identify the specific entity to retrieve. Supports OData query options for selecting specific properties ($select), expanding related entities ($expand). If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpBeneficiary",
+        "crudOperation": "readByKey",
+        "parameters": [
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          },
+          {
+            "name": "select"
+          },
+          {
+            "name": "expand"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "count_empbeneficiary_for_sfodata",
+    "title": "count_EmpBeneficiary_for_sfodata",
+    "description": "Get the total count of entities in the EmpBeneficiary collection in the sfodata service. Supports OData $filter to count only entities matching specific criteria. Use this when you need to determine the total number of entities without retrieving the actual data. If you need to understand the available filter properties, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpBeneficiary",
+        "crudOperation": "count",
+        "parameters": [
+          {
+            "name": "filter"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "list_empjobrelationshipnav_in_empemployment_for_sfodata",
+    "title": "list_empJobRelationshipNav_in_EmpEmployment_for_sfodata",
+    "description": "Navigate from EmpEmployment to related EmpJobRelationships entities via the 'empJobRelationshipNav' navigation property. Supports OData query options for filtering, sorting, paging, expanding, counting, and selecting specific properties. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpEmployment",
+        "navigationProperty": {
+          "name": "empJobRelationshipNav",
+          "crudOperation": "read",
+          "parameters": [
+            {
+              "name": "filter"
+            },
+            {
+              "name": "select"
+            },
+            {
+              "name": "orderby"
+            },
+            {
+              "name": "top"
+            },
+            {
+              "name": "skip"
+            },
+            {
+              "name": "expand"
+            },
+            {
+              "name": "inlinecount"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "personIdExternal",
+            "newParameterName": "personidexternal"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "create_empjobrelationshipnav_in_empemployment_for_sfodata",
+    "title": "create_empJobRelationshipNav_in_EmpEmployment_for_sfodata",
+    "description": "Create a new EmpJobRelationships entity via the 'empJobRelationshipNav' navigation property of EmpEmployment. Provide the parent key and the properties of the new entity. If the structure is unknown, call get_metadata_sfodata tool first.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpEmployment",
+        "navigationProperty": {
+          "name": "empJobRelationshipNav",
+          "crudOperation": "create",
+          "parameters": [
+            {
+              "name": "createdBy",
+              "newParameterName": "createdby"
+            },
+            {
+              "name": "createdDateTime",
+              "newParameterName": "createddatetime"
+            },
+            {
+              "name": "createdOn",
+              "newParameterName": "createdon"
+            },
+            {
+              "name": "endDate",
+              "newParameterName": "enddate"
+            },
+            {
+              "name": "lastModifiedBy",
+              "newParameterName": "lastmodifiedby"
+            },
+            {
+              "name": "lastModifiedDateTime",
+              "newParameterName": "lastmodifieddatetime"
+            },
+            {
+              "name": "lastModifiedOn",
+              "newParameterName": "lastmodifiedon"
+            },
+            {
+              "name": "operation",
+              "newParameterName": "operation"
+            },
+            {
+              "name": "relUserId",
+              "newParameterName": "reluserid"
+            },
+            {
+              "name": "relationshipType",
+              "newParameterName": "relationshiptype"
+            },
+            {
+              "name": "startDate",
+              "newParameterName": "startdate"
+            },
+            {
+              "name": "userId",
+              "newParameterName": "userid_2"
+            },
+            {
+              "name": "employmentNav",
+              "newParameterName": "employmentnav"
+            },
+            {
+              "name": "relEmploymentNav",
+              "newParameterName": "relemploymentnav"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "personIdExternal",
+            "newParameterName": "personidexternal"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "content-id"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "count_empjobrelationshipnav_in_empemployment_for_sfodata",
+    "title": "count_empJobRelationshipNav_in_EmpEmployment_for_sfodata",
+    "description": "Count EmpJobRelationships entities accessible via the 'empJobRelationshipNav' navigation property of EmpEmployment in the sfodata service. Returns the total number of matching entities.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpEmployment",
+        "navigationProperty": {
+          "name": "empJobRelationshipNav",
+          "crudOperation": "count",
+          "parameters": [
+            {
+              "name": "filter"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "personIdExternal",
+            "newParameterName": "personidexternal"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "list_empworkpermitnav_in_empemployment_for_sfodata",
+    "title": "list_empWorkPermitNav_in_EmpEmployment_for_sfodata",
+    "description": "Navigate from EmpEmployment to related EmpWorkPermit entities via the 'empWorkPermitNav' navigation property. Supports OData query options for filtering, sorting, paging, expanding, counting, and selecting specific properties. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpEmployment",
+        "navigationProperty": {
+          "name": "empWorkPermitNav",
+          "crudOperation": "read",
+          "parameters": [
+            {
+              "name": "filter"
+            },
+            {
+              "name": "select"
+            },
+            {
+              "name": "orderby"
+            },
+            {
+              "name": "top"
+            },
+            {
+              "name": "skip"
+            },
+            {
+              "name": "expand"
+            },
+            {
+              "name": "inlinecount"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "personIdExternal",
+            "newParameterName": "personidexternal"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "create_empworkpermitnav_in_empemployment_for_sfodata",
+    "title": "create_empWorkPermitNav_in_EmpEmployment_for_sfodata",
+    "description": "Create a new EmpWorkPermit entity via the 'empWorkPermitNav' navigation property of EmpEmployment. Provide the parent key and the properties of the new entity. If the structure is unknown, call get_metadata_sfodata tool first.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpEmployment",
+        "navigationProperty": {
+          "name": "empWorkPermitNav",
+          "crudOperation": "create",
+          "parameters": [
+            {
+              "name": "attachment",
+              "newParameterName": "attachment"
+            },
+            {
+              "name": "attachmentFileName",
+              "newParameterName": "attachmentfilename"
+            },
+            {
+              "name": "attachmentFileSize",
+              "newParameterName": "attachmentfilesize"
+            },
+            {
+              "name": "attachmentFileType",
+              "newParameterName": "attachmentfiletype"
+            },
+            {
+              "name": "attachmentId",
+              "newParameterName": "attachmentid"
+            },
+            {
+              "name": "attachmentMimeType",
+              "newParameterName": "attachmentmimetype"
+            },
+            {
+              "name": "attachmentStatus",
+              "newParameterName": "attachmentstatus"
+            },
+            {
+              "name": "country",
+              "newParameterName": "country"
+            },
+            {
+              "name": "createdBy",
+              "newParameterName": "createdby"
+            },
+            {
+              "name": "createdDateTime",
+              "newParameterName": "createddatetime"
+            },
+            {
+              "name": "createdOn",
+              "newParameterName": "createdon"
+            },
+            {
+              "name": "documentNumber",
+              "newParameterName": "documentnumber"
+            },
+            {
+              "name": "documentTitle",
+              "newParameterName": "documenttitle"
+            },
+            {
+              "name": "documentType",
+              "newParameterName": "documenttype"
+            },
+            {
+              "name": "expirationDate",
+              "newParameterName": "expirationdate"
+            },
+            {
+              "name": "isValidated",
+              "newParameterName": "isvalidated"
+            },
+            {
+              "name": "issueDate",
+              "newParameterName": "issuedate"
+            },
+            {
+              "name": "issuePlace",
+              "newParameterName": "issueplace"
+            },
+            {
+              "name": "issuingAuthority",
+              "newParameterName": "issuingauthority"
+            },
+            {
+              "name": "lastModifiedBy",
+              "newParameterName": "lastmodifiedby"
+            },
+            {
+              "name": "lastModifiedDateTime",
+              "newParameterName": "lastmodifieddatetime"
+            },
+            {
+              "name": "lastModifiedOn",
+              "newParameterName": "lastmodifiedon"
+            },
+            {
+              "name": "notes",
+              "newParameterName": "notes"
+            },
+            {
+              "name": "userId",
+              "newParameterName": "userid_2"
+            },
+            {
+              "name": "employmentNav",
+              "newParameterName": "employmentnav"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "personIdExternal",
+            "newParameterName": "personidexternal"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "content-id"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "count_empworkpermitnav_in_empemployment_for_sfodata",
+    "title": "count_empWorkPermitNav_in_EmpEmployment_for_sfodata",
+    "description": "Count EmpWorkPermit entities accessible via the 'empWorkPermitNav' navigation property of EmpEmployment in the sfodata service. Returns the total number of matching entities.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpEmployment",
+        "navigationProperty": {
+          "name": "empWorkPermitNav",
+          "crudOperation": "count",
+          "parameters": [
+            {
+              "name": "filter"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "personIdExternal",
+            "newParameterName": "personidexternal"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "list_jobinfonav_in_empemployment_for_sfodata",
+    "title": "list_jobInfoNav_in_EmpEmployment_for_sfodata",
+    "description": "Navigate from EmpEmployment to related EmpJob entities via the 'jobInfoNav' navigation property. Supports OData query options for filtering, sorting, paging, expanding, counting, and selecting specific properties. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpEmployment",
+        "navigationProperty": {
+          "name": "jobInfoNav",
+          "crudOperation": "read",
+          "parameters": [
+            {
+              "name": "filter"
+            },
+            {
+              "name": "select"
+            },
+            {
+              "name": "orderby"
+            },
+            {
+              "name": "top"
+            },
+            {
+              "name": "skip"
+            },
+            {
+              "name": "expand"
+            },
+            {
+              "name": "inlinecount"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "personIdExternal",
+            "newParameterName": "personidexternal"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "create_jobinfonav_in_empemployment_for_sfodata",
+    "title": "create_jobInfoNav_in_EmpEmployment_for_sfodata",
+    "description": "Create a new EmpJob entity via the 'jobInfoNav' navigation property of EmpEmployment. Provide the parent key and the properties of the new entity. If the structure is unknown, call get_metadata_sfodata tool first.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpEmployment",
+        "navigationProperty": {
+          "name": "jobInfoNav",
+          "crudOperation": "create",
+          "parameters": [
+            {
+              "name": "assedicCertInitialStateNum",
+              "newParameterName": "assediccertinitialstatenum"
+            },
+            {
+              "name": "assedicCertObjectNum",
+              "newParameterName": "assediccertobjectnum"
+            },
+            {
+              "name": "businessUnit",
+              "newParameterName": "businessunit"
+            },
+            {
+              "name": "calcMethodIndicator",
+              "newParameterName": "calcmethodindicator"
+            },
+            {
+              "name": "commitmentIndicator",
+              "newParameterName": "commitmentindicator"
+            },
+            {
+              "name": "company",
+              "newParameterName": "company"
+            },
+            {
+              "name": "contractReferenceForAed",
+              "newParameterName": "contractreferenceforaed"
+            },
+            {
+              "name": "contractType",
+              "newParameterName": "contracttype"
+            },
+            {
+              "name": "costCenter",
+              "newParameterName": "costcenter"
+            },
+            {
+              "name": "countryOfCompany",
+              "newParameterName": "countryofcompany"
+            },
+            {
+              "name": "createdBy",
+              "newParameterName": "createdby"
+            },
+            {
+              "name": "createdDateTime",
+              "newParameterName": "createddatetime"
+            },
+            {
+              "name": "createdOn",
+              "newParameterName": "createdon"
+            },
+            {
+              "name": "defaultOvertimeCompensationVariant",
+              "newParameterName": "defaultovertimecompensationvariant"
+            },
+            {
+              "name": "department",
+              "newParameterName": "department"
+            },
+            {
+              "name": "division",
+              "newParameterName": "division"
+            },
+            {
+              "name": "eeo1JobCategory",
+              "newParameterName": "eeo1jobcategory"
+            },
+            {
+              "name": "eeo4JobCategory",
+              "newParameterName": "eeo4jobcategory"
+            },
+            {
+              "name": "eeo5JobCategory",
+              "newParameterName": "eeo5jobcategory"
+            },
+            {
+              "name": "eeo6JobCategory",
+              "newParameterName": "eeo6jobcategory"
+            },
+            {
+              "name": "eeoClass",
+              "newParameterName": "eeoclass"
+            },
+            {
+              "name": "electoralCollegeForWorkersRepresentatives",
+              "newParameterName": "electoralcollegeforworkersrepresentatives"
+            },
+            {
+              "name": "electoralCollegeForWorksCouncil",
+              "newParameterName": "electoralcollegeforworkscouncil"
+            },
+            {
+              "name": "empRelationship",
+              "newParameterName": "emprelationship"
+            },
+            {
+              "name": "emplStatus",
+              "newParameterName": "emplstatus"
+            },
+            {
+              "name": "employeeClass",
+              "newParameterName": "employeeclass"
+            },
+            {
+              "name": "employeeWorkgroupMembership",
+              "newParameterName": "employeeworkgroupmembership"
+            },
+            {
+              "name": "employmentType",
+              "newParameterName": "employmenttype"
+            },
+            {
+              "name": "endDate",
+              "newParameterName": "enddate"
+            },
+            {
+              "name": "event",
+              "newParameterName": "event"
+            },
+            {
+              "name": "eventReason",
+              "newParameterName": "eventreason"
+            },
+            {
+              "name": "exclExecutiveSector",
+              "newParameterName": "exclexecutivesector"
+            },
+            {
+              "name": "expectedReturnDate",
+              "newParameterName": "expectedreturndate"
+            },
+            {
+              "name": "familyRelationshipWithEmployer",
+              "newParameterName": "familyrelationshipwithemployer"
+            },
+            {
+              "name": "fgtsDate",
+              "newParameterName": "fgtsdate"
+            },
+            {
+              "name": "fgtsOptant",
+              "newParameterName": "fgtsoptant"
+            },
+            {
+              "name": "fgtsPercent",
+              "newParameterName": "fgtspercent"
+            },
+            {
+              "name": "flsaStatus",
+              "newParameterName": "flsastatus"
+            },
+            {
+              "name": "fte",
+              "newParameterName": "fte"
+            },
+            {
+              "name": "harmfulAgentExposure",
+              "newParameterName": "harmfulagentexposure"
+            },
+            {
+              "name": "hazard",
+              "newParameterName": "hazard"
+            },
+            {
+              "name": "healthRisk",
+              "newParameterName": "healthrisk"
+            },
+            {
+              "name": "holidayCalendarCode",
+              "newParameterName": "holidaycalendarcode"
+            },
+            {
+              "name": "isCompetitionClauseActive",
+              "newParameterName": "iscompetitionclauseactive"
+            },
+            {
+              "name": "isFulltimeEmployee",
+              "newParameterName": "isfulltimeemployee"
+            },
+            {
+              "name": "isSideLineJobAllowed",
+              "newParameterName": "issidelinejoballowed"
+            },
+            {
+              "name": "jobCode",
+              "newParameterName": "jobcode"
+            },
+            {
+              "name": "jobTitle",
+              "newParameterName": "jobtitle"
+            },
+            {
+              "name": "laborProtection",
+              "newParameterName": "laborprotection"
+            },
+            {
+              "name": "lastModifiedBy",
+              "newParameterName": "lastmodifiedby"
+            },
+            {
+              "name": "lastModifiedDateTime",
+              "newParameterName": "lastmodifieddatetime"
+            },
+            {
+              "name": "lastModifiedOn",
+              "newParameterName": "lastmodifiedon"
+            },
+            {
+              "name": "location",
+              "newParameterName": "location"
+            },
+            {
+              "name": "managerId",
+              "newParameterName": "managerid"
+            },
+            {
+              "name": "mandatoryWorkBreakRecord",
+              "newParameterName": "mandatoryworkbreakrecord"
+            },
+            {
+              "name": "municipalInseeCode",
+              "newParameterName": "municipalinseecode"
+            },
+            {
+              "name": "notes",
+              "newParameterName": "notes"
+            },
+            {
+              "name": "operation",
+              "newParameterName": "operation"
+            },
+            {
+              "name": "payGrade",
+              "newParameterName": "paygrade"
+            },
+            {
+              "name": "payScaleArea",
+              "newParameterName": "payscalearea"
+            },
+            {
+              "name": "payScaleGroup",
+              "newParameterName": "payscalegroup"
+            },
+            {
+              "name": "payScaleLevel",
+              "newParameterName": "payscalelevel"
+            },
+            {
+              "name": "payScaleType",
+              "newParameterName": "payscaletype"
+            },
+            {
+              "name": "pcfm",
+              "newParameterName": "pcfm"
+            },
+            {
+              "name": "pensionProtection",
+              "newParameterName": "pensionprotection"
+            },
+            {
+              "name": "permitIndicator",
+              "newParameterName": "permitindicator"
+            },
+            {
+              "name": "position",
+              "newParameterName": "position"
+            },
+            {
+              "name": "positionEntryDate",
+              "newParameterName": "positionentrydate"
+            },
+            {
+              "name": "probationPeriodEndDate",
+              "newParameterName": "probationperiodenddate"
+            },
+            {
+              "name": "regularTemp",
+              "newParameterName": "regulartemp"
+            },
+            {
+              "name": "residentVote",
+              "newParameterName": "residentvote"
+            },
+            {
+              "name": "retired",
+              "newParameterName": "retired"
+            },
+            {
+              "name": "seqNumber",
+              "newParameterName": "seqnumber"
+            },
+            {
+              "name": "sickPaySupplement",
+              "newParameterName": "sickpaysupplement"
+            },
+            {
+              "name": "standardHours",
+              "newParameterName": "standardhours"
+            },
+            {
+              "name": "startDate",
+              "newParameterName": "startdate"
+            },
+            {
+              "name": "teachersPension",
+              "newParameterName": "teacherspension"
+            },
+            {
+              "name": "timeRecordingAdmissibilityCode",
+              "newParameterName": "timerecordingadmissibilitycode"
+            },
+            {
+              "name": "timeRecordingProfileCode",
+              "newParameterName": "timerecordingprofilecode"
+            },
+            {
+              "name": "timeRecordingVariant",
+              "newParameterName": "timerecordingvariant"
+            },
+            {
+              "name": "timeTypeProfileCode",
+              "newParameterName": "timetypeprofilecode"
+            },
+            {
+              "name": "timezone",
+              "newParameterName": "timezone"
+            },
+            {
+              "name": "travelDistance",
+              "newParameterName": "traveldistance"
+            },
+            {
+              "name": "tupeOrgNumber",
+              "newParameterName": "tupeorgnumber"
+            },
+            {
+              "name": "userId",
+              "newParameterName": "userid_2"
+            },
+            {
+              "name": "workLocation",
+              "newParameterName": "worklocation"
+            },
+            {
+              "name": "workerCategory",
+              "newParameterName": "workercategory"
+            },
+            {
+              "name": "workingDaysPerWeek",
+              "newParameterName": "workingdaysperweek"
+            },
+            {
+              "name": "workingTimeDirective",
+              "newParameterName": "workingtimedirective"
+            },
+            {
+              "name": "workscheduleCode",
+              "newParameterName": "workschedulecode"
+            },
+            {
+              "name": "wtdHoursLimit",
+              "newParameterName": "wtdhourslimit"
+            },
+            {
+              "name": "employmentNav",
+              "newParameterName": "employmentnav"
+            },
+            {
+              "name": "managerEmploymentNav",
+              "newParameterName": "manageremploymentnav"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "personIdExternal",
+            "newParameterName": "personidexternal"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "location"
+        },
+        {
+          "name": "content-id"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "count_jobinfonav_in_empemployment_for_sfodata",
+    "title": "count_jobInfoNav_in_EmpEmployment_for_sfodata",
+    "description": "Count EmpJob entities accessible via the 'jobInfoNav' navigation property of EmpEmployment in the sfodata service. Returns the total number of matching entities.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpEmployment",
+        "navigationProperty": {
+          "name": "jobInfoNav",
+          "crudOperation": "count",
+          "parameters": [
+            {
+              "name": "filter"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "personIdExternal",
+            "newParameterName": "personidexternal"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get_emppensionpayoutnav_in_empemployment_for_sfodata",
+    "title": "get_empPensionPayoutNav_in_EmpEmployment_for_sfodata",
+    "description": "Navigate from EmpEmployment to the related EmpPensionPayout entity via the 'empPensionPayoutNav' navigation property. Supports $select and $expand query options. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpEmployment",
+        "navigationProperty": {
+          "name": "empPensionPayoutNav",
+          "crudOperation": "readByKey",
+          "parameters": [
+            {
+              "name": "select"
+            },
+            {
+              "name": "expand"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "personIdExternal",
+            "newParameterName": "personidexternal"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "update_emppensionpayoutnav_in_empemployment_for_sfodata",
+    "title": "update_empPensionPayoutNav_in_EmpEmployment_for_sfodata",
+    "description": "Update the EmpPensionPayout entity navigated from EmpEmployment via the 'empPensionPayoutNav' navigation property (HTTP PATCH). Provide the parent key and the properties to update. If the structure is unknown, call get_metadata_sfodata tool first.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpEmployment",
+        "navigationProperty": {
+          "name": "empPensionPayoutNav",
+          "crudOperation": "update",
+          "parameters": []
+        },
+        "parameters": [
+          {
+            "name": "personIdExternal",
+            "newParameterName": "personidexternal"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get_empbeneficiarynav_in_empemployment_for_sfodata",
+    "title": "get_empBeneficiaryNav_in_EmpEmployment_for_sfodata",
+    "description": "Navigate from EmpEmployment to the related EmpBeneficiary entity via the 'empBeneficiaryNav' navigation property. Supports $select and $expand query options. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpEmployment",
+        "navigationProperty": {
+          "name": "empBeneficiaryNav",
+          "crudOperation": "readByKey",
+          "parameters": [
+            {
+              "name": "select"
+            },
+            {
+              "name": "expand"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "personIdExternal",
+            "newParameterName": "personidexternal"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "update_empbeneficiarynav_in_empemployment_for_sfodata",
+    "title": "update_empBeneficiaryNav_in_EmpEmployment_for_sfodata",
+    "description": "Update the EmpBeneficiary entity navigated from EmpEmployment via the 'empBeneficiaryNav' navigation property (HTTP PATCH). Provide the parent key and the properties to update. If the structure is unknown, call get_metadata_sfodata tool first.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpEmployment",
+        "navigationProperty": {
+          "name": "empBeneficiaryNav",
+          "crudOperation": "update",
+          "parameters": []
+        },
+        "parameters": [
+          {
+            "name": "personIdExternal",
+            "newParameterName": "personidexternal"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get_employmentnav_in_empemploymenttermination_for_sfodata",
+    "title": "get_employmentNav_in_EmpEmploymentTermination_for_sfodata",
+    "description": "Navigate from EmpEmploymentTermination to the related EmpEmployment entity via the 'employmentNav' navigation property. Supports $select and $expand query options. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpEmploymentTermination",
+        "navigationProperty": {
+          "name": "employmentNav",
+          "crudOperation": "readByKey",
+          "parameters": [
+            {
+              "name": "select"
+            },
+            {
+              "name": "expand"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "endDate",
+            "newParameterName": "enddate"
+          },
+          {
+            "name": "personIdExternal",
+            "newParameterName": "personidexternal"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "update_employmentnav_in_empemploymenttermination_for_sfodata",
+    "title": "update_employmentNav_in_EmpEmploymentTermination_for_sfodata",
+    "description": "Update the EmpEmployment entity navigated from EmpEmploymentTermination via the 'employmentNav' navigation property (HTTP PATCH). Provide the parent key and the properties to update. If the structure is unknown, call get_metadata_sfodata tool first.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpEmploymentTermination",
+        "navigationProperty": {
+          "name": "employmentNav",
+          "crudOperation": "update",
+          "parameters": []
+        },
+        "parameters": [
+          {
+            "name": "endDate",
+            "newParameterName": "enddate"
+          },
+          {
+            "name": "personIdExternal",
+            "newParameterName": "personidexternal"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get_jobinfonav_in_empemploymenttermination_for_sfodata",
+    "title": "get_jobInfoNav_in_EmpEmploymentTermination_for_sfodata",
+    "description": "Navigate from EmpEmploymentTermination to the related EmpJob entity via the 'jobInfoNav' navigation property. Supports $select and $expand query options. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpEmploymentTermination",
+        "navigationProperty": {
+          "name": "jobInfoNav",
+          "crudOperation": "readByKey",
+          "parameters": [
+            {
+              "name": "select"
+            },
+            {
+              "name": "expand"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "endDate",
+            "newParameterName": "enddate"
+          },
+          {
+            "name": "personIdExternal",
+            "newParameterName": "personidexternal"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "update_jobinfonav_in_empemploymenttermination_for_sfodata",
+    "title": "update_jobInfoNav_in_EmpEmploymentTermination_for_sfodata",
+    "description": "Update the EmpJob entity navigated from EmpEmploymentTermination via the 'jobInfoNav' navigation property (HTTP PATCH). Provide the parent key and the properties to update. If the structure is unknown, call get_metadata_sfodata tool first.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpEmploymentTermination",
+        "navigationProperty": {
+          "name": "jobInfoNav",
+          "crudOperation": "update",
+          "parameters": []
+        },
+        "parameters": [
+          {
+            "name": "endDate",
+            "newParameterName": "enddate"
+          },
+          {
+            "name": "personIdExternal",
+            "newParameterName": "personidexternal"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get_employmentnav_in_empworkpermit_for_sfodata",
+    "title": "get_employmentNav_in_EmpWorkPermit_for_sfodata",
+    "description": "Navigate from EmpWorkPermit to the related EmpEmployment entity via the 'employmentNav' navigation property. Supports $select and $expand query options. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpWorkPermit",
+        "navigationProperty": {
+          "name": "employmentNav",
+          "crudOperation": "readByKey",
+          "parameters": [
+            {
+              "name": "select"
+            },
+            {
+              "name": "expand"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "country",
+            "newParameterName": "country"
+          },
+          {
+            "name": "documentNumber",
+            "newParameterName": "documentnumber"
+          },
+          {
+            "name": "documentType",
+            "newParameterName": "documenttype"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "update_employmentnav_in_empworkpermit_for_sfodata",
+    "title": "update_employmentNav_in_EmpWorkPermit_for_sfodata",
+    "description": "Update the EmpEmployment entity navigated from EmpWorkPermit via the 'employmentNav' navigation property (HTTP PATCH). Provide the parent key and the properties to update. If the structure is unknown, call get_metadata_sfodata tool first.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpWorkPermit",
+        "navigationProperty": {
+          "name": "employmentNav",
+          "crudOperation": "update",
+          "parameters": []
+        },
+        "parameters": [
+          {
+            "name": "country",
+            "newParameterName": "country"
+          },
+          {
+            "name": "documentNumber",
+            "newParameterName": "documentnumber"
+          },
+          {
+            "name": "documentType",
+            "newParameterName": "documenttype"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get_employmentnav_in_empjobrelationships_for_sfodata",
+    "title": "get_employmentNav_in_EmpJobRelationships_for_sfodata",
+    "description": "Navigate from EmpJobRelationships to the related EmpEmployment entity via the 'employmentNav' navigation property. Supports $select and $expand query options. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpJobRelationships",
+        "navigationProperty": {
+          "name": "employmentNav",
+          "crudOperation": "readByKey",
+          "parameters": [
+            {
+              "name": "select"
+            },
+            {
+              "name": "expand"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "relationshipType",
+            "newParameterName": "relationshiptype"
+          },
+          {
+            "name": "startDate",
+            "newParameterName": "startdate"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "update_employmentnav_in_empjobrelationships_for_sfodata",
+    "title": "update_employmentNav_in_EmpJobRelationships_for_sfodata",
+    "description": "Update the EmpEmployment entity navigated from EmpJobRelationships via the 'employmentNav' navigation property (HTTP PATCH). Provide the parent key and the properties to update. If the structure is unknown, call get_metadata_sfodata tool first.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpJobRelationships",
+        "navigationProperty": {
+          "name": "employmentNav",
+          "crudOperation": "update",
+          "parameters": []
+        },
+        "parameters": [
+          {
+            "name": "relationshipType",
+            "newParameterName": "relationshiptype"
+          },
+          {
+            "name": "startDate",
+            "newParameterName": "startdate"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get_relemploymentnav_in_empjobrelationships_for_sfodata",
+    "title": "get_relEmploymentNav_in_EmpJobRelationships_for_sfodata",
+    "description": "Navigate from EmpJobRelationships to the related EmpEmployment entity via the 'relEmploymentNav' navigation property. Supports $select and $expand query options. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpJobRelationships",
+        "navigationProperty": {
+          "name": "relEmploymentNav",
+          "crudOperation": "readByKey",
+          "parameters": [
+            {
+              "name": "select"
+            },
+            {
+              "name": "expand"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "relationshipType",
+            "newParameterName": "relationshiptype"
+          },
+          {
+            "name": "startDate",
+            "newParameterName": "startdate"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "update_relemploymentnav_in_empjobrelationships_for_sfodata",
+    "title": "update_relEmploymentNav_in_EmpJobRelationships_for_sfodata",
+    "description": "Update the EmpEmployment entity navigated from EmpJobRelationships via the 'relEmploymentNav' navigation property (HTTP PATCH). Provide the parent key and the properties to update. If the structure is unknown, call get_metadata_sfodata tool first.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpJobRelationships",
+        "navigationProperty": {
+          "name": "relEmploymentNav",
+          "crudOperation": "update",
+          "parameters": []
+        },
+        "parameters": [
+          {
+            "name": "relationshipType",
+            "newParameterName": "relationshiptype"
+          },
+          {
+            "name": "startDate",
+            "newParameterName": "startdate"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get_employmentnav_in_empjob_for_sfodata",
+    "title": "get_employmentNav_in_EmpJob_for_sfodata",
+    "description": "Navigate from EmpJob to the related EmpEmployment entity via the 'employmentNav' navigation property. Supports $select and $expand query options. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpJob",
+        "navigationProperty": {
+          "name": "employmentNav",
+          "crudOperation": "readByKey",
+          "parameters": [
+            {
+              "name": "select"
+            },
+            {
+              "name": "expand"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "seqNumber",
+            "newParameterName": "seqnumber"
+          },
+          {
+            "name": "startDate",
+            "newParameterName": "startdate"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "update_employmentnav_in_empjob_for_sfodata",
+    "title": "update_employmentNav_in_EmpJob_for_sfodata",
+    "description": "Update the EmpEmployment entity navigated from EmpJob via the 'employmentNav' navigation property (HTTP PATCH). Provide the parent key and the properties to update. If the structure is unknown, call get_metadata_sfodata tool first.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpJob",
+        "navigationProperty": {
+          "name": "employmentNav",
+          "crudOperation": "update",
+          "parameters": []
+        },
+        "parameters": [
+          {
+            "name": "seqNumber",
+            "newParameterName": "seqnumber"
+          },
+          {
+            "name": "startDate",
+            "newParameterName": "startdate"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get_manageremploymentnav_in_empjob_for_sfodata",
+    "title": "get_managerEmploymentNav_in_EmpJob_for_sfodata",
+    "description": "Navigate from EmpJob to the related EmpEmployment entity via the 'managerEmploymentNav' navigation property. Supports $select and $expand query options. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpJob",
+        "navigationProperty": {
+          "name": "managerEmploymentNav",
+          "crudOperation": "readByKey",
+          "parameters": [
+            {
+              "name": "select"
+            },
+            {
+              "name": "expand"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "seqNumber",
+            "newParameterName": "seqnumber"
+          },
+          {
+            "name": "startDate",
+            "newParameterName": "startdate"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "update_manageremploymentnav_in_empjob_for_sfodata",
+    "title": "update_managerEmploymentNav_in_EmpJob_for_sfodata",
+    "description": "Update the EmpEmployment entity navigated from EmpJob via the 'managerEmploymentNav' navigation property (HTTP PATCH). Provide the parent key and the properties to update. If the structure is unknown, call get_metadata_sfodata tool first.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpJob",
+        "navigationProperty": {
+          "name": "managerEmploymentNav",
+          "crudOperation": "update",
+          "parameters": []
+        },
+        "parameters": [
+          {
+            "name": "seqNumber",
+            "newParameterName": "seqnumber"
+          },
+          {
+            "name": "startDate",
+            "newParameterName": "startdate"
+          },
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get_employmentnav_in_emppensionpayout_for_sfodata",
+    "title": "get_employmentNav_in_EmpPensionPayout_for_sfodata",
+    "description": "Navigate from EmpPensionPayout to the related EmpEmployment entity via the 'employmentNav' navigation property. Supports $select and $expand query options. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpPensionPayout",
+        "navigationProperty": {
+          "name": "employmentNav",
+          "crudOperation": "readByKey",
+          "parameters": [
+            {
+              "name": "select"
+            },
+            {
+              "name": "expand"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "update_employmentnav_in_emppensionpayout_for_sfodata",
+    "title": "update_employmentNav_in_EmpPensionPayout_for_sfodata",
+    "description": "Update the EmpEmployment entity navigated from EmpPensionPayout via the 'employmentNav' navigation property (HTTP PATCH). Provide the parent key and the properties to update. If the structure is unknown, call get_metadata_sfodata tool first.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpPensionPayout",
+        "navigationProperty": {
+          "name": "employmentNav",
+          "crudOperation": "update",
+          "parameters": []
+        },
+        "parameters": [
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "get_employmentnav_in_empbeneficiary_for_sfodata",
+    "title": "get_employmentNav_in_EmpBeneficiary_for_sfodata",
+    "description": "Navigate from EmpBeneficiary to the related EmpEmployment entity via the 'employmentNav' navigation property. Supports $select and $expand query options. If the structure of the entity is not known, call get_metadata_sfodata tool first to get the metadata.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpBeneficiary",
+        "navigationProperty": {
+          "name": "employmentNav",
+          "crudOperation": "readByKey",
+          "parameters": [
+            {
+              "name": "select"
+            },
+            {
+              "name": "expand"
+            }
+          ]
+        },
+        "parameters": [
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  },
+  {
+    "name": "update_employmentnav_in_empbeneficiary_for_sfodata",
+    "title": "update_employmentNav_in_EmpBeneficiary_for_sfodata",
+    "description": "Update the EmpEmployment entity navigated from EmpBeneficiary via the 'employmentNav' navigation property (HTTP PATCH). Provide the parent key and the properties to update. If the structure is unknown, call get_metadata_sfodata tool first.",
+    "odataType": {
+      "entitySet": {
+        "name": "EmpBeneficiary",
+        "navigationProperty": {
+          "name": "employmentNav",
+          "crudOperation": "update",
+          "parameters": []
+        },
+        "parameters": [
+          {
+            "name": "userId",
+            "newParameterName": "userid"
+          }
+        ]
+      },
+      "responseHeaders": [
+        {
+          "name": "age"
+        },
+        {
+          "name": "cache-control"
+        },
+        {
+          "name": "expires"
+        },
+        {
+          "name": "last-modified"
+        },
+        {
+          "name": "x-request-id"
+        },
+        {
+          "name": "x-correlation-id"
+        },
+        {
+          "name": "content-type"
+        },
+        {
+          "name": "content-encoding"
+        },
+        {
+          "name": "content-language"
+        },
+        {
+          "name": "content-length"
+        },
+        {
+          "name": "dataserviceversion"
+        },
+        {
+          "name": "etag"
+        },
+        {
+          "name": "sap-message"
+        }
+      ]
+    }
+  }
+]

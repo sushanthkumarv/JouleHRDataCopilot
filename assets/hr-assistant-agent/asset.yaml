@@ -1,0 +1,56 @@
+apiVersion: asset.sap/v1
+kind: Asset
+type: agent
+
+metadata:
+  name: hr-assistant-agent
+  version: "1.0.0"
+
+provides:
+  apis:
+    - name: hr-assistant-agent
+      kind: a2a
+      ordId: customer.build:apiResource:hr-assistant-61c3a.hr-assistant-agent:v1
+
+container:
+  buildPath: .
+  port: 5000
+
+requires:
+  - name: sap-sf-pltrolebasedpermissions-mcp-server
+    kind: mcp-server
+    ordId: customer.build:apiResource:hr-assistant-61c3a.sap-sf-pltrolebasedpermissions-mcp-server:v1
+  - name: sap-sf-ecemployeeprofile-mcp-server
+    kind: mcp-server
+    ordId: customer.build:apiResource:hr-assistant-61c3a.sap-sf-ecemployeeprofile-mcp-server:v1
+  - name: sap-sf-ecemployeecentralpayroll-mcp-server
+    kind: mcp-server
+    ordId: customer.build:apiResource:hr-assistant-61c3a.sap-sf-ecemployeecentralpayroll-mcp-server:v1
+  - name: sap-sf-balances-mcp-server
+    kind: mcp-server
+    ordId: customer.build:apiResource:hr-assistant-61c3a.sap-sf-balances-mcp-server:v1
+  - name: sap-sf-eccompensationinformation-mcp-server
+    kind: mcp-server
+    ordId: customer.build:apiResource:hr-assistant-61c3a.sap-sf-eccompensationinformation-mcp-server:v1
+  - name: sap-sf-ecemploymentinformation-mcp-server
+    kind: mcp-server
+    ordId: customer.build:apiResource:hr-assistant-61c3a.sap-sf-ecemploymentinformation-mcp-server:v1
+
+probes:
+  startup:
+    path: /.well-known/agent.json
+    periodSeconds: 5
+    timeoutSeconds: 3
+    failureThreshold: 18
+  liveness:
+    path: /.well-known/agent.json
+    initialDelaySeconds: 15
+    periodSeconds: 10
+    timeoutSeconds: 5
+    failureThreshold: 3
+  readiness:
+    path: /.well-known/agent.json
+    initialDelaySeconds: 5
+    periodSeconds: 5
+    timeoutSeconds: 3
+    failureThreshold: 3

@@ -1,0 +1,20 @@
+apiVersion: asset.sap/v1
+kind: Asset
+type: mcp-server
+
+metadata:
+  name: sap-sf-ecemploymentinformation-mcp-server
+  version: "1.0.0"
+  translation: mcp-translation/translation.json
+  apiSpec: mcp-translation/api-spec.edmx
+
+provides:
+  apis:
+    - name: sap-sf-ecemploymentinformation-mcp-server
+      kind: mcp-server
+      ordId: customer.build:apiResource:hr-assistant-61c3a.sap-sf-ecemploymentinformation-mcp-server:v1
+
+requires:
+  - name: ECEmploymentInformation
+    kind: api
+    ordId: sap.sf:apiResource:ECEmploymentInformation:v1

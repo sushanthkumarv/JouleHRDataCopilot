@@ -1,0 +1,16 @@
+apiVersion: solution.sap/v1
+kind: Solution
+
+metadata:
+  name: hr-assistant-61c3a
+  version: "1.0.0"
+  description: "Enterprise HR Assistant Agent with SAP SuccessFactors integration, authorization validation, GDPR/CCPA privacy compliance, and audit logging."
+
+assets:
+  - ref: ./assets/hr-assistant-agent/asset.yaml
+  - ref: ./assets/sap-sf-pltrolebasedpermissions-mcp-server/asset.yaml
+  - ref: ./assets/sap-sf-ecemployeeprofile-mcp-server/asset.yaml
+  - ref: ./assets/sap-sf-ecemployeecentralpayroll-mcp-server/asset.yaml
+  - ref: ./assets/sap-sf-balances-mcp-server/asset.yaml
+  - ref: ./assets/sap-sf-eccompensationinformation-mcp-server/asset.yaml
+  - ref: ./assets/sap-sf-ecemploymentinformation-mcp-server/asset.yaml
